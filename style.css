@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+  --primary-color: #040D12;
+  --yellow: #FEF989;
+  --white:#F5E8C7;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100%;
+  padding: 0 20%;
+  font-family: 'poppins', sans-serif;
+}
+
+
+#app{
+  width: 100%;
+  height: fit-content;
+  margin:  16px 0;
+  text-align: center;
+}
+
+
+#app h1{
+  color: #F5E8C7;
+  font-size: 48px;
+}
+
+#app h1 span{
+  background-color: var(--yellow); 
+  color: #040D12;
+  padding: 2px 18px;
+  border-radius: 40px;
+}
+
+#app h4{
+  color: #F5E8C7;
+  margin: 4px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+#app h4 span{
+  color: var(--white);
+  background-image: linear-gradient(to bottom, transparent 2em, rgba(0, 0, 0, 0.8) 1.4em),
+                    url('public//dual-underline.svg');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100% 0.4em;
+  display: inline-block;
+  line-height: 1.5; /* Adjust line height for proper spacing */
+}
+
+
+#app .communities-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 18px;
+}
+
+#app .communities-container .community-item{
+  height: 180px;
+  width: 170px;
+  background-color: aqua;
+  border-radius: 8px ;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#app .communities-container .community-item img{
+  width: 140px;
+  transform: rotate(20deg) translate(45px , -34px);
+  opacity: 0.9;
+}
+
+#app .communities-container a{
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+
+@media (max-width: 640px) { 
+  body{
+    padding: 0 2%;
+  }
+
+  #app h1{
+    color: #F5E8C7;
+    font-size: 32px;
+  }
+
+  #app .communities-container{
+    gap: 8px;
+  }
+
+  #app .communities-container .community-item{
+    height: 120px;
+    width: 110px;
+    background-color: aqua;
+    border-radius: 8px ;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  #app .communities-container .community-item img{
+    width:90px;
+    transform: rotate(20deg) translate(30px , -34px);
+    opacity: 0.9;
+  }
+}

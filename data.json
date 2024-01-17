@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Whatsapp",
+        "icon":"whatsapp-color-svgrepo-com.svg",
+        "color":"#67c15e",
+        "link":"https://wa.me/qr/Q5625XM5CM3JP1"
+    },
+    {
+        "name":"Telegram",
+        "icon":"telegram-svgrepo-com.svg",
+        "color":"#09244b",
+        "link":"https://t.me/+212624441384"
+    },
+    {
+        "name":"discord",
+        "icon":"discord-svgrepo-com.svg",
+        "color":"#5865f2",
+        "link":"https://discord.gg/2Ecm3a2v1"
+    },
+    {
+        "name":"e-mail",
+        "icon":"email-svgrepo-com.svg",
+        "color":"#cc3a2e",
+        "link":"/waitlist.html"
+    }
+]
