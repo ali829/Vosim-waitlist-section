@@ -4,7 +4,7 @@ const render = (domElem, data) => {
   data.forEach((element, index) => {
     html += `<a href="${element.link}" target="_blank">
     <div class="community-item" style="background-color: ${element.color}">
-      <img src="../public/${element.icon}" alt="" />
+      <img src="${element.icon}" alt="" />
       <p>${element.name}</p>
     </div>
   </a>`;
