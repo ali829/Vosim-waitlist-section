@@ -3,6 +3,24 @@ import isMobileDevice from "./checkDevice";
 import data from "./data.json";
 import render from "./renderCommunities";
 window.onload = () => {
+  emailjs.init({
+    publicKey: "user_qAPjBGVe4gARH8zRHts0Q",
+  });
+  function sendAdressIp() {
+    var templateParams = {
+      name: "James",
+      notes: "Check this out!",
+    };
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
+  }
   const communitiesContainer = document.querySelector(".communities-container");
   if (isMobileDevice()) {
     let filteredDataOnMobile = data.filter(
@@ -30,6 +48,7 @@ window.onload = () => {
     "sf7NkNqC2XHs7x4I6cTz",
     function (data) {
       console.log(data);
+      sendAdressIp();
     },
     function (errorCode, errorMessage) {
       console.log(errorCode, errorMessage);
