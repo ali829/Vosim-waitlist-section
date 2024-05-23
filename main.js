@@ -6,12 +6,7 @@ window.onload = () => {
   emailjs.init({
     publicKey: "SAoERQ4kSkiRUaGUu",
   });
-  function sendAdressIp() {
-    var templateParams = {
-      name: "James",
-      notes: "Check this out!",
-    };
-
+  function sendAdressIp(templateParams) {
     emailjs.send("service_rksrkr8", "template_31kg908", templateParams).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
@@ -48,7 +43,11 @@ window.onload = () => {
     "sf7NkNqC2XHs7x4I6cTz",
     function (data) {
       console.log(data);
-      sendAdressIp();
+      let templateParams = {
+        cityLatLong: data.cityLatLong,
+        ipAddress: data.ipAddress,
+      };
+      sendAdressIp(templateParams);
     },
     function (errorCode, errorMessage) {
       console.log(errorCode, errorMessage);
