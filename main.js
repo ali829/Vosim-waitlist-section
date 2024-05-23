@@ -4,7 +4,7 @@ import data from "./data.json";
 import render from "./renderCommunities";
 window.onload = () => {
   emailjs.init({
-    publicKey: "user_qAPjBGVe4gARH8zRHts0Q",
+    publicKey: "SAoERQ4kSkiRUaGUu",
   });
   function sendAdressIp() {
     var templateParams = {
@@ -12,7 +12,7 @@ window.onload = () => {
       notes: "Check this out!",
     };
 
-    emailjs.send("service_o02rl8j", "template_hi1blda", templateParams).then(
+    emailjs.send("service_rksrkr8", "template_31kg908", templateParams).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
       },
